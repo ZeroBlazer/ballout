@@ -21,6 +21,7 @@ class list
         list() :m_pHead(0), m_pTail(0), m_size(0) {}
         virtual ~list() {if(m_pHead) m_pHead->killMe();}
 
+        inline bool empty() {if(!m_size) return true; return false;}
         inline sizet size() {return m_size;}
         T& operator [](sizet position);
 
